@@ -1,0 +1,5 @@
+pymem
+requests
+keyboard
+dearpygui>=2.1.1
+psutil>=5.9

@@ -1,0 +1,330 @@
+body {
+  background-color: #210202;
+	background-image: url("assets/bg/blur/crim1.png");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+@keyframes fadeout {
+  from {
+    opacity: 1;
+    pointer-events: all;
+  }
+  to {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.fadeout {
+  animation: fadeout 1s ease-in-out forwards;
+}
+
+.windowfade {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #210202;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  animation: fadeout 1s ease-in-out forwards;
+  pointer-events: none;
+}
+
+.zdklogo {
+  filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, .69)); /* nice */
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('assets/fonts/inter/Inter-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'LEMONMILK';
+  src: url('assets/fonts/lemonmilk/LEMONMILK-Regular.otf');
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  font-family: 'Inter';
+  color: white;
+  margin: 2px;
+ }
+
+.logotitle {
+	font-family: 'lemonmilk';
+	font-size: 27px;
+}
+
+.logocenter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 0px;
+  text-shadow: 0px 0px 5px #000000;
+}
+
+.homescrn {
+  position: fixed;
+  width: 400px;
+  height: 320px;
+  padding: 0px;
+  margin: auto;
+  inset: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-shadow: 0px 0px 5px #000000;
+  backdrop-filter: brightness(70%);
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px #00000055;
+}
+
+.homeactions {
+	margin-top: 15px;
+	display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-shadow: 0px 0px 5px #000000;
+  gap: 10px;
+}
+
+/*button {
+	color: white;
+	background-color: #7d0a0a;
+	padding: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border: solid;
+	border-color: #960c0c;
+	border-radius: 5px;
+}*/
+
+button {
+  background-color: #7a1010;
+  border: 0px solid #450909;
+  border-radius: 5px;
+  color: white;
+  font-family: inter;
+  padding: 10px 26px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  box-shadow: 0px 0px 7px #000000cc;
+  transition-duration: 0.2s;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #8c1212;
+  font-size: 17px;
+}
+
+button:active {
+  background-color: #590b0b;
+}
+
+.currentinstance {
+	font-size: 10px;
+	position: fixed;
+	bottom: 12px;
+}
+
+.helpbtn {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	margin: 10px;
+	background-color: #00000000;
+	width: 50px;
+	height: 50px;
+	padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 7px #00000000;
+}
+
+.helpbtn:hover {
+	background-color: #00000050;
+	box-shadow: 0px 0px 7px #00000020;
+	scale: 1.05;
+}
+
+.settingsbtn {
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	margin: 10px;
+	background-color: #00000000;
+	width: 50px;
+	height: 50px;
+	padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 7px #00000000;
+}
+
+.settingsbtn:hover {
+	background-color: #00000050;
+	box-shadow: 0px 0px 7px #00000020;
+	scale: 1.05;
+}
+
+/* i'll center it later */
+.love {
+	position: fixed;
+	bottom: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} 
+
+.username {
+	position: fixed;
+	bottom: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} 
+
+/*.settings {
+	position: fixed;
+	background-color: #000000;
+	width: 80%;
+	height: 69%;
+	inset: 0;
+}
+*/
+.settings {
+  position: fixed;
+  width: 80%;
+  height: 80%;
+  padding: 0px;
+  margin: auto;
+  inset: 0px;
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(20px) brightness(40%);
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px #00000055;
+  z-index: 7; /* i like the number 7 */
+  opacity: 0;
+  scale: 0.8;
+  pointer-events: none;
+}
+
+.help {
+  position: fixed;
+  width: 450px;
+  height: 80%;
+  padding: 0px;
+  margin: auto;
+  inset: 0px;
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(20px) brightness(40%);
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px #00000055;
+  z-index: 7; /* i like the number 7 */
+  opacity: 0;
+  scale: 0.8;
+  pointer-events: none;
+}
+
+@keyframes popup {
+  from {
+    scale: 0.8;
+    opacity: 0;
+    pointer-events: none;
+  }
+  to {
+    scale: 1;
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+.popup {
+	animation: popup 0.5s ease-out forwards;
+}
+
+@keyframes popout {
+  from {
+    scale: 1;
+    opacity: 1;
+    pointer-events: all;
+  }
+  to {
+    scale: 0.8;
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.popout {
+	animation: popout 0.5s ease-in forwards;
+}
+
+.windowiframe {
+	width: 100%;
+	height: 100%;
+	border: 0;
+	border-radius: 20px;
+}
+
+.instances {
+  position: fixed;
+  width: 70%;
+  height: 80%;
+  padding: 0px;
+  margin: auto;
+  inset: 0px;
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(20px) brightness(40%);
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px #00000055;
+  z-index: 7; /* i like the number 7 */
+  opacity: 0;
+  scale: 0.8;
+  pointer-events: none;
+}
+
+.loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding: 0;
+  backdrop-filter: blur(20px);
+  background: #000000aa;
+  z-index: 5;
+  pointer-events: all;
+  /*opacity: 0;*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  text-shadow: 0px 0px 20px #ffffffcc;
+}
+
+.loading-fine-print {
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+  margin: 0;
+  opacity: 0.5;
+  text-shadow: 0px 0px 20px #ffffffcc;
+}

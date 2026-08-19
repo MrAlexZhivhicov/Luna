@@ -1,0 +1,10 @@
+customtkinter - deprecated
+pyngrok
+requests
+portablemc
+pywebview
+wmi
+psutil
+humanize
+gputil
+lib-platform
